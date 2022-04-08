@@ -14,12 +14,13 @@ async function main() {
   // await hre.run('compile');
 
   // We get the contract to deploy
-  const Greeter = await hre.ethers.getContractFactory("Greeter");
-  const greeter = await Greeter.deploy("Hello, Hardhat!");
+  const RewardsRecharger = await hre.ethers.getContractFactory("RewardsRecharger");
+  const interval = 604800; //1 week in seconds
+  const rewardsRecharger = await RewardsRecharger.deploy(interval);
 
-  await greeter.deployed();
+  await rewardsRecharger.deployed();
 
-  console.log("Greeter deployed to:", greeter.address);
+  console.log("RewardsRecharger deployed to:", rewardsRecharger.address);
 }
 
 // We recommend this pattern to be able to use async/await everywhere
