@@ -9,6 +9,7 @@
     "hardhat": "^2.9.3"
   },
   "dependencies": {
-    "@chainlink/contracts": "^0.4.0"
+    "@chainlink/contracts": "^0.4.0",
+    "hardhat-abi-exporter": "^2.8.0"
   }
 }
