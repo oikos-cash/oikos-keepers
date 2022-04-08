@@ -28,7 +28,7 @@ npm run build
 
 
 ## 3. Deploy
-Will attempt to deploy (or reuse) all of the contracts listed in the given config.json input file, as well as perform initial connections between the contracts.
+Will attempt to deploy all of the contracts.
 
 :warning: **This step requires the `build` step having been run to compile the sources into ABIs and bytecode.**
 
