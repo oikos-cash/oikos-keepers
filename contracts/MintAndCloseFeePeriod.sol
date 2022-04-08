@@ -32,7 +32,7 @@ contract MintAndCloseFeePeriod is KeeperCompatibleInterface {
     function checkUpkeep(
         bytes calldata /*checkData */
     ) external override returns (bool upkeepNeeded, bytes memory) {
-        upkeepNeeded = (block.timestamp - lastTimestamp) > interval;
+        upkeepNeeded = (block.timestamp - lastTimestamp) >= interval;
     }
 
     //Called by Chainlink Keepers to handle work
