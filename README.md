@@ -32,12 +32,10 @@ Will attempt to deploy (or reuse) all of the contracts listed in the given confi
 
 :warning: **This step requires the `build` step having been run to compile the sources into ABIs and bytecode.**
 
-> Note: this action will update the deployment files for the associated network in "deployed/<network-name>". For example, [here's the "deployment.json" file for ganache](deployed/ganache/deployment.json).
-
 ```bash
 # deploy (deploy compiled .sol sources)
 npm run deploy-ganache
 ```
 
-To deploy the code on multiple networks the truffle-config.js file needs to be adjusted, see instructions [here](https://trufflesuite.com/docs/truffle/reference/configuration#networks).
+To deploy the code on multiple networks the hardhat.config.js file needs to be adjusted, see instructions [here](https://hardhat.org/config/).
 
