@@ -1,5 +1,5 @@
 # oikos-keepers 
-### This repository contains the Oikos Chainlink  smart contract code.
+### This repository contains the Oikos Chainlink keepers smart contract code.
 
 * RewardsRecharger 
 * MintAndCloseFeePeriod
