@@ -5,7 +5,7 @@ import "./SafeMath.sol";
 import "./Ownable.sol";
 import "./SafeERC20.sol";
 
-import "./IRewardDistributionRecipient.sol";
+import "./interfaces/IRewardDistributionRecipient.sol";
 
 contract LPTokenWrapper {
     using SafeMath for uint256;
