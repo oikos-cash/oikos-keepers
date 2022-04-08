@@ -11,5 +11,13 @@
   "dependencies": {
     "@chainlink/contracts": "^0.4.0",
     "hardhat-abi-exporter": "^2.8.0"
+  },    
+  "scripts": {
+    "build": "npx hardhat compile",
+    "clear-all": "rm -rf artifacts abi cache",
+    "export-abi": "npx hardhat export-abi",
+    "clear-abi": "npx hardhat clear-abi",
+    "test": "npx hardhat test --network ganache test/Keeper.js",
+    "deploy-ganache": " npm run export-abi; npx hardhat --network ganache run scripts/deploy.js"
   }
 }
