@@ -4,7 +4,6 @@ import "./interfaces/IERC20.sol";
 import "@chainlink/contracts/src/v0.8/interfaces/KeeperCompatibleInterface.sol";
 
 interface IOikos {
-    // ========== PUBLIC STATE VARIABLES ==========
     function mint() external returns (bool);
 }
 

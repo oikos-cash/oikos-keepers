@@ -11,8 +11,8 @@ interface ICakePool {
 contract RewardsRecharger is KeeperCompatibleInterface {
    
     address public derive_oUSD_rewards_contract      = 0x8559AeF12e2C40E66f0eb600d0Dd8ae5CeA419D7;
-    address public pancake_oUSD_BNB_rewards_contract = 0xD8f27e3e7da60d8CF43b76e335412369FEd96295;
     address public derive_DRV_rewards_contract       = 0x0555746f7104DB313660c09E38bF8a1dbdcd3681;
+    address public pancake_oUSD_BNB_rewards_contract = 0xD8f27e3e7da60d8CF43b76e335412369FEd96295;
 
     uint public derive_oUSD_rewards_amount      = 100000 ether;
     uint public pancake_oUSD_BNB_rewards_amount = 100000 ether;
