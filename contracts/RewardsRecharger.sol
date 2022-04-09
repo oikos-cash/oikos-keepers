@@ -25,6 +25,13 @@ contract RewardsRecharger is KeeperCompatibleInterface {
     ICakePool public derivePool_DRV       = ICakePool(derive_DRV_rewards_contract);
     ICakePool public pancakePool_oUSD_BNB = ICakePool(pancake_oUSD_BNB_rewards_contract);
 
+    //Notify reward amounts
+    function notifyRewardAmounts() internal {
+        derivePool_oUSD.notifyRewardAmount(derive_oUSD_rewards_amount);
+        pancakePool_oUSD_BNB.notifyRewardAmount(pancake_oUSD_BNB_rewards_amount);
+        derivePool_DRV.notifyRewardAmount(derive_DRV_rewards_amount);
+    }
+
     //Called by Chainlink Keepers to check if work needs to be done
     function checkUpkeep(
         bytes calldata 
@@ -34,9 +41,7 @@ contract RewardsRecharger is KeeperCompatibleInterface {
 
     //Called by Chainlink Keepers to handle work
     function performUpkeep(bytes calldata) external override {
-        derivePool_oUSD.notifyRewardAmount(derive_oUSD_rewards_amount);
-        pancakePool_oUSD_BNB.notifyRewardAmount(pancake_oUSD_BNB_rewards_amount);
-        derivePool_DRV.notifyRewardAmount(derive_DRV_rewards_amount);
+        notifyRewardAmounts();
         lastTimestamp = block.timestamp;
     }
 
