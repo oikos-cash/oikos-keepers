@@ -65,7 +65,6 @@ contract ProtocolTasks is KeeperCompatibleInterface {
     //Called by Chainlink Keepers to handle work
     function performUpkeep(bytes calldata) external override {
         mintAndCloseFeePeriod();
-        //lastTimestamp = block.timestamp;
     }
 
 }
