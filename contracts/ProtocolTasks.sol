@@ -58,7 +58,7 @@ contract ProtocolTasks is KeeperCompatibleInterface {
     //Called by Chainlink Keepers to check if work needs to be done
     function checkUpkeep(
         bytes calldata
-    ) external override returns (bool upkeepNeeded, bytes memory) {
+    ) external view override returns (bool upkeepNeeded, bytes memory) {
         upkeepNeeded = true;
     }
 
