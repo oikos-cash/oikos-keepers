@@ -3,11 +3,11 @@ const hre = require("hardhat");
 async function main() {
 
   const ProtocolTasks = await hre.ethers.getContractFactory("ProtocolTasks");
-  const ProtocolTasks = await ProtocolTasks.deploy();
+  const protocolTasks = await ProtocolTasks.deploy();
 
-  await ProtocolTasks.deployed();
+  await protocolTasks.deployed();
 
-  console.log("ProtocolTasks deployed to:", ProtocolTasks.address);
+  console.log("ProtocolTasks deployed to:", protocolTasks.address);
 
 }
 
@@ -19,3 +19,5 @@ main()
     console.error(error);
     process.exit(1);
   });
+
+
