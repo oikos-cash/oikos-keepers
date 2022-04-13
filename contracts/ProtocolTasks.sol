@@ -13,7 +13,7 @@ interface ICakePool {
      function notifyRewardAmount(uint256 reward) external ;
 }
 
-contract MintAndCloseFeePeriod is KeeperCompatibleInterface {
+contract ProtocolTasks is KeeperCompatibleInterface {
 
     // Oikos ERC20Proxy on BSC mainnet
     address public constant oikos = 0x18aCf236eB40c0d4824Fb8f2582EBbEcD325Ef6a;
