@@ -1,4 +1,5 @@
 require("@nomiclabs/hardhat-waffle");
+require("@nomiclabs/hardhat-etherscan");
 require('hardhat-abi-exporter');
 
 // This is a sample Hardhat task. To learn how to create your own go to
@@ -26,7 +27,19 @@ module.exports = {
       url: "http://localhost:8545",
       gasPrice: 95358432601,
       accounts: [process.env.PRIVATE_KEY]
-    }
+    },
+    bsc: {
+      url: process.env.PROVIDER_URL,
+      gasPrice: 5000000000,
+      accounts: [process.env.PRIVATE_KEY]
+    },
+  },
+  etherscan: {
+    // Your API key for Etherscan
+    // Obtain one at https://etherscan.io/
+    apiKey: {
+      bsc: process.env.ETHERSCAN_API_KEY,
+    },
   },
   solidity: "0.8.13",
   abiExporter: {
