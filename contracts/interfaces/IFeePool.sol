@@ -26,7 +26,15 @@ interface IFeePool {
 
     function totalFeesAvailable() external view returns (uint);
 
-    function lastFeePeriodStartTime() external view returns (uint);
+    function recentFeePeriods(uint index) external view returns (
+            uint64 feePeriodId,
+            uint64 startingDebtIndex,
+            uint64 startTime,
+            uint feesToDistribute,
+            uint feesClaimed,
+            uint rewardsToDistribute,
+            uint rewardsClaimed
+    );
 
     function totalRewardsAvailable() external view returns (uint);
 

@@ -2,6 +2,7 @@ pragma solidity ^0.8.0;
 
 import "./interfaces/IERC20.sol";
 import "./interfaces/IFeePool.sol";
+import "./interfaces/ICakePool.sol";
 import "@chainlink/contracts/src/v0.8/interfaces/KeeperCompatibleInterface.sol";
 
 interface IOikos {
@@ -9,9 +10,7 @@ interface IOikos {
 }
 
 
-interface ICakePool {
-     function notifyRewardAmount(uint256 reward) external ;
-}
+
 
 contract ProtocolTasks is KeeperCompatibleInterface {
 
@@ -34,8 +33,6 @@ contract ProtocolTasks is KeeperCompatibleInterface {
     ICakePool public pancakePool_oUSD_BNB = ICakePool(pancake_oUSD_BNB_rewards_contract);
 
     function mintAndCloseFeePeriod() internal {
-        uint currentPeriodStartTime = feePool.lastFeePeriodStartTime();
-        require(currentPeriodStartTime <= (block.timestamp - interval), "Too early to close fee period");
 
         IOikos(oikos).mint();
         feePool.closeCurrentFeePeriod();
