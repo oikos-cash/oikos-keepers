@@ -53,7 +53,7 @@ describe(yellow("Protocol automation"), accounts => {
             try {
                  ProtocolTasks._notifyRewardAmounts([]);
             } catch (err) { 
-                assert(err.message == "VM Exception while processing transaction: revert Caller is not reward distribution");
+                assert(err.message != "VM Exception while processing transaction: revert Caller is not reward distribution");
             }
         });
 
