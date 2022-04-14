@@ -10,8 +10,6 @@ interface IOikos {
 }
 
 
-
-
 contract ProtocolTasks is KeeperCompatibleInterface {
 
     // Oikos ERC20Proxy on BSC mainnet
