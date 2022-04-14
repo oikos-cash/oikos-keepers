@@ -2,8 +2,8 @@
 ### This repository contains the Oikos Chainlink keepers smart contract code.
 
 ## Tasks
-* RewardsRecharger (notify weekly reward amounts to reward contracts)
-* MintAndCloseFeePeriod (Mint weekly inflationary supply and close fee pool period)
+* notifyRewardAmounts (Notify weekly reward amounts to reward contracts)
+* mintAndCloseFeePeriod (Mint weekly inflationary supply and close fee pool period)
 
 
 ## Requirements
